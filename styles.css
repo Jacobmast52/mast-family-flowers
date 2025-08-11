@@ -67,7 +67,8 @@ nav a:hover {
 
 /* Hero section */
 .hero {
-  background-image: url('images/hero_field.png');
+  /* Use root-level path for hero image on GitHub Pages */
+  background-image: url('hero_field.png');
   background-size: cover;
   background-position: center;
   color: #fff;
