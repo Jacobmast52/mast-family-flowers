@@ -1,0 +1,316 @@
+/*
+ * Mast Family Flowers – Main stylesheet
+ *
+ * This stylesheet defines the colour palette, typography and layout rules
+ * used across the Mast Family Flowers website. The goal is to create
+ * an inviting, family‑run feel while keeping the design clean and
+ * approachable. Colours are inspired by the warm sunset hues and
+ * natural greens found in the Pacific Northwest.
+ */
+
+/* CSS reset (minimal) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+}
+
+/* Container class to centre content and set a maximum width */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header styling */
+header {
+  background-color: #ffffff;
+  border-bottom: 4px solid #e5e5e5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-family: "Georgia", serif;
+  font-size: 1.8rem;
+  color: #d74f84;
+}
+
+nav a {
+  margin-left: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #444;
+  transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #d74f84;
+}
+
+/* Hero section */
+.hero {
+  background-image: url('images/hero_field.png');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+  font-family: "Georgia", serif;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #d74f84;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #b33c68;
+}
+
+/* Sections */
+section {
+  padding: 3rem 0;
+}
+
+section h3 {
+  font-family: "Georgia", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d74f84;
+  text-align: center;
+}
+
+section p {
+  margin-bottom: 1rem;
+}
+
+/* Pricing cards */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-family: "Georgia", serif;
+  color: #333;
+}
+
+.card .price {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #d74f84;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 0.95rem;
+}
+
+.card .btn {
+  margin-top: 1rem;
+}
+
+/* Form styling */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #d74f84;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+form button:hover {
+  background-color: #b33c68;
+}
+
+/* Event list */
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.event-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.event-item h4 {
+  font-family: "Georgia", serif;
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.event-item .date {
+  font-weight: bold;
+  color: #d74f84;
+  margin-bottom: 0.5rem;
+}
+
+.event-item p {
+  font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+  background-color: #f5f5f5;
+  padding: 2rem 0;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/*
+ * Additional utility classes for images
+ * These classes are used on the Events and About pages to display
+ * decorative artwork. The event-banner class scales a full‑width
+ * illustration to the container while maintaining its aspect ratio.
+ * The about-image class centers a medium‑sized image and limits
+ * its maximum width for better readability on large screens.
+ */
+.event-banner {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.about-image {
+  width: 60%;
+  max-width: 600px;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 1rem;
+    display: inline-block;
+  }
+}
